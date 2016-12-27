@@ -40,6 +40,9 @@ public class Pharmancy_zavodskiy extends Activity {
     public static final String Apteca_Falbi = "Аптека Фалби";
     public static final String Apteca_NoName = "Аптека";
     public static final String Vasha_Apteka = "Ваша Аптека";
+    public static final String Apteca_Ekonom_na_aptece = "Экономь на аптеке";
+    public static final String Apteca_Ekonom = "Аптека эконом";
+
 
     private static final LatLng CAMERA_INSTALL = new LatLng(46.95635534, 31.96944237);
 
@@ -132,6 +135,10 @@ public class Pharmancy_zavodskiy extends Activity {
     private static String WORK_TIME_Medtehnika_Dobrota = "Вр. раб.: пн.-пт. 8-17, сб.8-15. вс. вых. ";
     private static String Medtehnika_Dobrota_40_47_77 = "тел. (0512)-40-47-77. ";
 
+    /* аптека эконом рабочее время
+    */
+    private static String WORK_TIME_APTEKA_EKONOM="Вр. раб.: пн.-вс. 7:30-21";
+
     /*
      Bagaemo_Zdorovya = "Бажаемо здоровья"
      */
@@ -148,7 +155,7 @@ public class Pharmancy_zavodskiy extends Activity {
     Аптека № 9 "Фармация"
      */
     private static String Apteka_Farmacia_34_61_66 = "тел. (0512)-34-61-66. ";
-    private static String Apteka_Farmacia_41_36_09 = "тел. (0512)-42-36-09. ";
+    private static String Apteka_Farmacia_41_52_49 = "тел. (0512)-41-52-49. ";
     /*
    Аптека Фалби"
     */
@@ -164,6 +171,15 @@ public class Pharmancy_zavodskiy extends Activity {
     private static String Apteka_NoName_45_16_91 = "тел. (0512)-46-16-91. ";
     private static String Apteka_NoName_2 = "тел.  ";
     private static String Apteka_NoName_3 = "тел.  ";
+    /*
+        экономь на аптеке
+         */
+    private static String Apteka_Ekonom_na_aptece_41_96_42 = "тел. (0512)-41-96-42. ";
+
+        /*
+        аптека  на Ивушке
+         */
+        private static String Apteka_Ivushka_41_99_22 = "тел. (0512)-41-99-22. ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,6 +212,7 @@ public class Pharmancy_zavodskiy extends Activity {
         }
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CAMERA_INSTALL, 13));
         googleMap.setMapType(googleMap.MAP_TYPE_NORMAL);
+        googleMap.setMyLocationEnabled(true);
     }
 
 
@@ -309,7 +326,7 @@ public class Pharmancy_zavodskiy extends Activity {
             /* Аптека низких цен 20
                     */
             googleMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(46.950899, 31.942586))
+                    .position(new LatLng(46.95117039, 31.94269739))
                     .title(ANTsen)
                     .snippet(ANTsen_57_45_04 + WORK_TIME_20)
                     .draggable(true)
@@ -387,13 +404,13 @@ public class Pharmancy_zavodskiy extends Activity {
             /*
         Эконом Аптека
             */
-            googleMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(46.95166817, 31.94180502))
-                    .title(Econom_Apteka)
-                    .snippet(Ekonom_Apteka_067_35_63 + WORK_TIME_20)
-                    .draggable(true)
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-            );
+//            googleMap.addMarker(new MarkerOptions()
+//                    .position(new LatLng(46.95166817, 31.94180502))
+//                    .title(Econom_Apteka)
+//                    .snippet(Ekonom_Apteka_067_35_63 + WORK_TIME_20)
+//                    .draggable(true)
+//                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+//            );
 
             googleMap.addMarker(new MarkerOptions()
                     .position(new LatLng(46.9677396, 31.97155461))
@@ -507,13 +524,13 @@ public class Pharmancy_zavodskiy extends Activity {
                     .draggable(true)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
             );
-            googleMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(46.9501775, 31.9418195))
-                    .title(Apteca_Farmacia)
-                    .snippet(Apteka_Farmacia_41_36_09)
-                    .draggable(true)
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
-            );
+               googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(46.95036386, 46.95036386))
+                .title(Apteca_Farmacia)
+                .snippet(Apteka_Farmacia_41_52_49+WORK_TIME_20)
+               .draggable(true)
+               .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
+               );
 
             /*
                 Аптека Фалби"
@@ -564,6 +581,71 @@ public class Pharmancy_zavodskiy extends Activity {
                     .snippet(Apteka_NoName_2)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
             );
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.94799454, 31.94390707))
+                    .title(Apteca_NoName)
+                    .draggable(true)
+                    .snippet(Apteka_NoName_2+WORK_TIME_21)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
+            );
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.94594099, 31.94103643))
+                    .title(Apteca_NoName)
+                    .draggable(true)
+                    .snippet(Apteka_NoName_2+WORK_TIME_20)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+            );
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.95775402, 31.95809193))
+                    .title(Apteca_NoName)
+                    .draggable(true)
+                    .snippet(Apteka_NoName_2+WORK_TIME_20)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+            );
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.95602947,31.95480421))
+                    .title(Apteca_Ekonom_na_aptece)
+                    .draggable(true)
+                    .snippet(Apteka_Ekonom_na_aptece_41_96_42+WORK_TIME_21)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
+            );
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.95476989, 31.95183232))
+                    .title(Apteca_NoName)
+                    .draggable(true)
+                    .snippet(WORK_TIME_19)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+            );
+
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.95494381, 31.94259681))
+                    .title(Apteca_Ekonom)
+                    .draggable(true)
+                    .snippet(WORK_TIME_APTEKA_EKONOM)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
+            );
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.94941999,31.94399223))
+                    .title(Apteca_NoName)
+                    .draggable(true)
+                    .snippet(WORK_TIME_19)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+            );
+
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(46.95735676,31.95857003))
+                    .title(Apteca_NoName)
+                    .draggable(true)
+                    .snippet(Apteka_Ivushka_41_99_22+WORK_TIME_20)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+            );
+
         }
     }
 

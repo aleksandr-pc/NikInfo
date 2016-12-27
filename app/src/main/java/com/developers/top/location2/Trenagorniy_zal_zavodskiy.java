@@ -100,6 +100,8 @@ public class Trenagorniy_zal_zavodskiy extends Activity {
             Log.e("mapApp", exception.toString());
         }
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CAMERA_INSTALL, 13));
+        googleMap.setMapType(googleMap.MAP_TYPE_NORMAL);
+        googleMap.setMyLocationEnabled(true);
     }
 
 
